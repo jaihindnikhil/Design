@@ -1,0 +1,21 @@
+<header>
+  <h1>Jaihind Furniture & Interiors</h1>
+</header>
+
+<main>
+  <ul>
+    <li *ngFor="let product of products" (click)="selectProduct(product)">
+      {{ product.name }}
+    </li>
+  </ul>
+</main>
+
+<footer>
+  <p>Address: Shankar Wadi, Somatane, Dehuroad, Pune 410506 | Contact: 9822037833</p>
+</footer>
+
+<app-viewer
+  *ngIf="selectedImage"
+  [image]="selectedImage"
+  (close)="selectedImage = null"
+></app-viewer>

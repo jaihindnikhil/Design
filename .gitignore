@@ -26,3 +26,17 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+
+# Angular specific
+/src/dist/
+/src/out-tsc/
+/src/tmp/
+/src/coverage/
+/src/e2e/test-output/
+/src/.angular/
+/src.angular/
+/src/node_modules/
+/src/package-lock.json
+/src/yarn.lock
+
