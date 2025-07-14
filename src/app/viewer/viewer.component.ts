@@ -1,8 +1,7 @@
 import { Component, Input, OnDestroy, OnInit, Output, EventEmitter } from '@angular/core';
 import * as THREE from 'three';
-import PhotoSphereViewer from 'photo-sphere-viewer';
-import GyroscopePlugin from '@photo-sphere-viewer/gyroscope';
-
+import * as PhotoSphereViewer from 'photo-sphere-viewer';
+import { GyroscopePlugin } from 'photo-sphere-viewer/dist/plugins/gyroscope';
 @Component({
   selector: 'app-viewer',
   templateUrl: './viewer.component.html',
@@ -28,9 +27,7 @@ export class ViewerComponent implements OnInit, OnDestroy {
       this.viewer.zoom(90);
 
       const gyro = this.viewer.getPlugin(GyroscopePlugin);
-      if (gyro) {
-        gyro.start();
-      }
+      if (gyro) gyro.start();
     });
   }
 
